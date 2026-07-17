@@ -11,38 +11,38 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <a class="marca" href="#inicio" aria-label="Ir para o início do CareerJourney">
-            <img class="logo" src="./assets/images/logo-career-journey.png" alt="Logo CareerJourney">
-        </a>
-    </header>
-
     <main>
-        <section class="onboarding" id="onboarding" aria-labelledby="titulo-principal">  <!-- Pagina Inicial com formulario -->
+        <section class="onboarding" id="onboarding" aria-labelledby="titulo-principal">
+            <!-- Pagina Inicial com formulario -->
             <div class="conteudo-onboarding">
-                <div class="onboarding_introducao">
+                <header class="onboarding_introducao">
+                    <a href="#onboarding" aria-label="Ir para o início do CareerJourney">
+                        <img class="logo" src="./assets/images/logo-career-journey.png" alt="Logo CareerJourney">
+                    </a>
                     <h1 id="titulo-principal"> O próximo passo <span>começa hoje!</span></h1>
                     <p>
                         O CareerJourney analisa seu perfil, encontra oportunidades
-                        compatíveis e cria um plano de evolução para ajudar você
+                        compatíveis e cria um plano de estudos para te ajudar
                         a alcançar seu próximo objetivo profissional.
                     </p>
-                </div>
-                <div class="card-formulario">
+                </header>
+                <section class="card-formulario" aria-labelledby="titulo-formulario">
                     <header class="cabecalho-formulario">
-                        <h2>Pronto para o seu próximo desafio?</h2>
+                        <h2 id="titulo-formulario">Pronto para o seu próximo desafio?</h2>
                         <p> Conte um pouco sobre você e descubra o caminho para sua próxima conquista.</p>
                     </header>
 
                     <form class="formulario-perfil" id="formulario-perfil" novalidate autocomplete="on">
                         <div class="campo-formulario">
                             <label for="nome"><span class="icones icone-nome" aria-hidden="true"></span>Nome</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" autocomplete="name" required>
+                            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo"
+                                autocomplete="name" required>
                             <p class="mensagem-erro" id="erro-nome" aria-live="polite"></p>
                         </div>
 
                         <div class="campo-formulario">
-                            <label for="area"><span class="icones icone-area" aria-hidden="true"></span>Área de atuação</label>
+                            <label for="area"><span class="icones icone-area" aria-hidden="true"></span>Área de
+                                atuação</label>
 
                             <select id="area" name="area" required>
                                 <option value="" selected disabled hidden>Selecione sua área</option>
@@ -54,31 +54,32 @@
                         </div>
 
                         <div class="campo-formulario">
-                            <label for="habilidades"><span class="icones icone-habilidades" aria-hidden="true"></span>Principais habilidades</label>
-                            <input type="text" id="habilidades" name="habilidades" placeholder="Ex.: HTML, CSS, JavaScript" aria-describedby="ajuda-habilidades" required>
+                            <label for="habilidades"><span class="icones icone-habilidades"
+                                    aria-hidden="true"></span>Principais habilidades</label>
+                            <input type="text" id="habilidades" name="habilidades"
+                                placeholder="Ex.: HTML, CSS, JavaScript" aria-describedby="ajuda-habilidades" required>
                             <small id="ajuda-habilidades">Separe as habilidades por vírgula</small>
                             <p class="mensagem-erro" id="erro-habilidades" aria-live="polite"></p>
                         </div>
 
                         <div class="campo-formulario">
-                            <label for="experiencia"><span class="icones icone-experiencia" aria-hidden="true"></span>Tempo de experiência</label>
+                            <label for="experiencia"><span class="icones icone-experiencia"
+                                    aria-hidden="true"></span>Tempo de experiência</label>
                             <div class="campo-experiencia">
-                                <input type="number" id="experiencia" name="experiencia" min="0" placeholder="0" step="1" inputmode="numeric"><span>meses</span>
+                                <input type="number" id="experiencia" name="experiencia" min="0" placeholder="0"
+                                    step="1" inputmode="numeric"><span>meses</span>
                             </div>
                         </div>
-
                         <button class="botao-enviar" type="submit">Iniciar minha jornada</button>
                     </form>
-                </div>
+                </section>
             </div>
         </section>
         <section id="dashboard" class="dashboard" hidden>
             <!-- Dashboard será desenvolvido posteriormente -->
         </section>
     </main>
-    <footer class="rodape">
-        <p>CareerJourney — cada habilidade é um novo passo.</p>
-    </footer>
-     <script type="module" src="./assets/scripts/main.js"></script>
+    <script type="module" src="./assets/scripts/main.js"></script>
 </body>
+
 </html>
