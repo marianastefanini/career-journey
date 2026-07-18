@@ -58,3 +58,14 @@ function limparMensagensErro() {
     erroArea.textContent = "";
     erroHabilidades.textContent = "";
 }
+
+function criarCandidato() {
+    const candidato = {
+        nome: campoNome.value.trim(),
+        area: campoArea.value,
+        habilidades: campoHabilidades.value.split(",").map(habilidades => habilidade.trim()),
+        experiencia: Number(campoExperiencia.value)
+    }
+
+    return candidato;
+}
