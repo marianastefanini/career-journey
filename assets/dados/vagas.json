@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "empresa": "TechStart",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "area": "front-end",
+    "requisitos": ["HTML", "CSS", "JavaScript"],
+    "experienciaMinima": 0,
+    "salario": 3200,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 2,
+    "empresa": "CodeLab",
+    "cargo": "Desenvolvedor Front-End Júnior II",
+    "area": "front-end",
+    "requisitos": ["HTML", "CSS", "JavaScript"],
+    "experienciaMinima": 6,
+    "salario": 3800,
+    "modalidade": "Híbrido"
+  },
+  {
+    "id": 3,
+    "empresa": "PixelWorks",
+    "cargo": "Desenvolvedor Front-End React",
+    "area": "front-end",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "Acessibilidade"
+    ],
+    "experienciaMinima": 12,
+    "salario": 5500,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 4,
+    "empresa": "StudioFlow",
+    "cargo": "Designer UI/UX Júnior",
+    "area": "ui-ux",
+    "requisitos": ["Figma", "Wireframes", "Prototipagem"],
+    "experienciaMinima": 0,
+    "salario": 3000,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 5,
+    "empresa": "CreativeLab",
+    "cargo": "Designer UI/UX Júnior II",
+    "area": "ui-ux",
+    "requisitos": ["Figma", "Wireframes", "Prototipagem"],
+    "experienciaMinima": 6,
+    "salario": 3700,
+    "modalidade": "Híbrido"
+  },
+  {
+    "id": 6,
+    "empresa": "Experience Studio",
+    "cargo": "Product Designer",
+    "area": "ui-ux",
+    "requisitos": [
+      "Figma",
+      "Design System",
+      "Pesquisa com Usuários",
+      "Testes de Usabilidade",
+      "Prototipagem"
+    ],
+    "experienciaMinima": 12,
+    "salario": 5800,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 7,
+    "empresa": "DevConnect",
+    "cargo": "Desenvolvedor Full Stack Júnior",
+    "area": "full-stack",
+    "requisitos": ["HTML", "CSS", "JavaScript", "Node.js"],
+    "experienciaMinima": 0,
+    "salario": 3800,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 8,
+    "empresa": "NextCode",
+    "cargo": "Desenvolvedor Full Stack Júnior II",
+    "area": "full-stack",
+    "requisitos": ["HTML", "CSS", "JavaScript", "Node.js"],
+    "experienciaMinima": 6,
+    "salario": 4600,
+    "modalidade": "Híbrido"
+  },
+  {
+    "id": 9,
+    "empresa": "Cloud Systems",
+    "cargo": "Desenvolvedor Full Stack React e Node.js",
+    "area": "full-stack",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "APIs",
+      "Git",
+      "Banco de Dados"
+    ],
+    "experienciaMinima": 12,
+    "salario": 6500,
+    "modalidade": "Remoto"
+  }
+]
