@@ -9,13 +9,16 @@ const campoExperiencia = document.querySelector("#experiencia");
 const erroNome = document.querySelector("#erro-nome");
 const erroArea = document.querySelector("#erro-area");
 const erroHabilidades = document.querySelector("#erro-habilidades");
-const erroExperiencia = document.querySelector("#erro-experiencia");
 
+const statusVagas = document.querySelector("#status-vagas");
+
+export function atualizarStatusVagas(mensagem) {
+    statusVagas.textContent = mensagem;
+}
 
 export function inicializarFormulario(receberCandidato) {
     formulario.addEventListener("submit", (event) => 
         validarFormulario(event, receberCandidato));
-    
 }
 
 function validarFormulario(event, receberCandidato) { 

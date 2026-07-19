@@ -1,12 +1,10 @@
-import { inicializarFormulario } from "./ui.js";
+import { inicializarFormulario, atualizarStatusVagas } from "./ui.js";
 
 import { carregarVagas } from "./dados.js";
 
-import { analisarVagas, encontrarMelhorVaga } from "./motor.js";
+import { analisarVagas, encontrarMelhorVaga } from "./motor.js";    
 
-const vagas = await carregarVagas();
-
-function receberCandidato(candidato) {
+function receberCandidato(candidato, vagas) {
   const resultados = analisarVagas(candidato, vagas);
   const melhorVaga = encontrarMelhorVaga(resultados);
 
@@ -17,4 +15,27 @@ function receberCandidato(candidato) {
   console.log("Melhor vaga:", melhorVaga);
 }
 
-inicializarFormulario(receberCandidato);
+async function inicializarAplicacao() {
+  atualizarStatusVagas("Carregando vagas...");
+
+  try {
+    const vagas = await carregarVagas();    
+
+    if (vagas.length === 0) {
+      atualizarStatusVagas("Nenhuma vaga encontrada.");
+      return;
+    }
+
+    atualizarStatusVagas("");
+
+    inicializarFormulario((candidato) => {
+      receberCandidato(candidato, vagas);
+    });
+  } catch (erro) {
+    atualizarStatusVagas(
+      "Não foi possível carregar as vagas. Tente novamente mais tarde.",
+    );
+  }
+}
+
+inicializarAplicacao();

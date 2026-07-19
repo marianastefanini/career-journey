@@ -36,7 +36,6 @@ export async function carregarVagas() {
       );
     }
 
-    if (vaga.area === "full-stack") {
       return new VagaFullStack(
         vaga.id,
         vaga.empresa,
@@ -47,9 +46,6 @@ export async function carregarVagas() {
         vaga.salario,
         vaga.modalidade,
       );
-    }
-
-    throw new Error(`Área desconhecida: ${vaga.area}`);
   });
 
   return vagas;
