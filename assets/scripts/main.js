@@ -10,6 +10,11 @@ function receberCandidato(candidato) {
   const resultados = analisarVagas(candidato, vagas);
   const melhorVaga = encontrarMelhorVaga(resultados);
 
+  console.log("Candidato:", candidato);
+
+  console.log("Resultados:", resultados);
+
+  console.log("Melhor vaga:", melhorVaga);
 }
 
 inicializarFormulario(receberCandidato);
