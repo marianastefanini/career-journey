@@ -12,12 +12,13 @@ const erroHabilidades = document.querySelector("#erro-habilidades");
 const erroExperiencia = document.querySelector("#erro-experiencia");
 
 
-export function inicializarFormulario() {
-    formulario.addEventListener("submit", validarFormulario);
+export function inicializarFormulario(receberCandidato) {
+    formulario.addEventListener("submit", (event) => 
+        validarFormulario(event, receberCandidato));
     
 }
 
-function validarFormulario(event) {
+function validarFormulario(event, receberCandidato) { 
     event.preventDefault();
 
    limparMensagensErro();
@@ -45,7 +46,7 @@ function validarFormulario(event) {
 
     const candidato = criarCandidato();
 
-    console.log(candidato);
+    receberCandidato(candidato);
 
 }
 
@@ -63,7 +64,7 @@ function criarCandidato() {
     const candidato = {
         nome: campoNome.value.trim(),
         area: campoArea.value,
-        habilidades: campoHabilidades.value.split(",").map(habilidades => habilidade.trim()),
+        habilidades: campoHabilidades.value.split(",").map(habilidade => habilidade.trim().toLowerCase()),
         experiencia: Number(campoExperiencia.value)
     }
 
