@@ -28,7 +28,7 @@ select {
 .onboarding {
   min-height: 100vh;
   padding: 40px 80px;
-  background-image: url("../images/background.png");
+  background-image: url("../images/background.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -372,7 +372,7 @@ input::placeholder {
 .hero-dashboard {
   padding: 40px;
   border-radius: 20px;
-  background-image: url("../images/hero-dashboard.png");
+  background-image: url("../images/hero-dashboard.jpg");
   color: #ffffff;
 }
 
