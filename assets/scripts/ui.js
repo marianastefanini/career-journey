@@ -22,6 +22,8 @@ const resumoHabilidades = document.querySelector("#resumo-habilidades");
 const quantidadeResultados = document.querySelector("#quantidade-resultados");
 const listaVagas = document.querySelector("#lista-vagas");
 
+const resumoAnalises = document.querySelector("#resumo-analises");
+
 export function atualizarStatusVagas(mensagem) {
   statusVagas.textContent = mensagem;
 }
@@ -106,7 +108,7 @@ function criarCandidato() {
   return candidato;
 }
 
-export function mostrarDashboard(candidato, resultados, melhorVaga) {
+export function mostrarDashboard(candidato, resultados, melhorVaga, totalAnalises) {
   onboarding.hidden = true;
   dashboard.hidden = false;
 
@@ -127,6 +129,8 @@ export function mostrarDashboard(candidato, resultados, melhorVaga) {
   resumoHabilidades.textContent = candidato.habilidades.length;
 
   quantidadeResultados.textContent = `${resultados.length} vagas encontradas`;
+
+  resumoAnalises.textContent = totalAnalises;
 
   listaVagas.textContent = "";
 
