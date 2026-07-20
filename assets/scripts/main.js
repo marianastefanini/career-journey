@@ -1,4 +1,4 @@
-import { inicializarFormulario, atualizarStatusVagas } from "./ui.js";
+import { inicializarFormulario, atualizarStatusVagas, mostrarDashboard } from "./ui.js";
 
 import { carregarVagas } from "./dados.js";
 
@@ -8,11 +8,8 @@ function receberCandidato(candidato, vagas) {
   const resultados = analisarVagas(candidato, vagas);
   const melhorVaga = encontrarMelhorVaga(resultados);
 
-  console.log("Candidato:", candidato);
+  mostrarDashboard(candidato, resultados, melhorVaga);
 
-  console.log("Resultados:", resultados);
-
-  console.log("Melhor vaga:", melhorVaga);
 }
 
 async function inicializarAplicacao() {

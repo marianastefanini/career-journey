@@ -36,8 +36,8 @@
             </h1>
             <p>
               O CareerJourney analisa seu perfil, encontra oportunidades
-              compatíveis e cria um plano de estudos para te ajudar a alcançar
-              seu próximo objetivo profissional.
+              compatíveis e indica quais habilidades podem ajudar você a
+              alcançar seu próximo objetivo profissional.
             </p>
           </header>
           <section class="card-formulario" aria-labelledby="titulo-formulario">
@@ -142,8 +142,83 @@
           </section>
         </div>
       </section>
-      <section id="dashboard" class="dashboard" hidden>
-        <!-- Dashboard será desenvolvido posteriormente -->
+      <section
+        id="dashboard"
+        class="dashboard"
+        aria-labelledby="titulo-dashboard"
+        hidden
+      >
+        <header class="cabecalho-dashboard">
+          <img
+            class="logo-dashboard"
+            src="./assets/images/logo-career-journey-dashboard.png"
+            alt="Logo Career Journey"
+          />
+
+          <div class="saudacao-dashboard">
+            <h3 id="saudacao-candidato"></h3>
+            <p>Sua jornada de evolução continua.</p>
+          </div>
+        </header>
+
+        <div class="conteudo-dashboard">
+          <div class="coluna-principal-dashboard">
+            <section class="hero-dashboard" aria-labelledby="titulo-dashboard">
+              <p class="subtitulo-dashboard">Sua jornada</p>
+              <h2 id="titulo-dashboard">Descubra seu próximo destino</h2>
+              <p>
+                Analisamos seu perfil e encontramos as melhores oportunidades
+                para você evoluir.
+              </p>
+            </section>
+
+            <section class="resumo-dashboard" aria-label="Resumo da análise">
+              <article class="card-resumo">
+                <p>Compatibilidade da melhor vaga</p>
+                <strong id="resumo-compatibilidade"></strong>
+              </article>
+
+              <article class="card-resumo">
+                <p>Vagas analisadas</p>
+                <strong id="resumo-vagas"></strong>
+              </article>
+
+              <article class="card-resumo">
+                <p>Habilidades dominadas</p>
+                <strong id="resumo-habilidades"></strong>
+              </article>
+            </section>
+
+            <section
+              class="resultados-vagas"
+              aria-labelledby="titulo-resultados"
+            >
+              <header class="cabecalho-resultados">
+                <div>
+                  <h3 id="titulo-resultados">Vagas para você</h3>
+                  <p id="quantidade-resultados"></p>
+                </div>
+              </header>
+
+              <div
+                class="lista-vagas"
+                id="lista-vagas"
+                aria-live="polite"
+              ></div>
+            </section>
+          </div>
+        </div>
+
+        <footer class="rodape-dashboard">
+          <div>
+            <strong>Quer atualizar seus resultados?</strong>
+            <p>Refaça sua análise a qualquer momento.</p>
+          </div>
+
+          <button class="botao-refazer" id="botao-refazer" type="button">
+            Refazer análise
+          </button>
+        </footer>
       </section>
     </main>
     <script type="module" src="./assets/scripts/main.js"></script>
