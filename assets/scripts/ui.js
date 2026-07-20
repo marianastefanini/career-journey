@@ -28,6 +28,20 @@ export function atualizarStatusVagas(mensagem) {
   statusVagas.textContent = mensagem;
 }
 
+export function salvarPerfil(candidato) {
+  localStorage.setItem("perfilCandidato",JSON.stringify(candidato));
+}
+
+export function obterPerfilSalvo() {
+  const perfilSalvo = localStorage.getItem("perfilCandidato");
+
+  if (perfilSalvo === null) {
+    return null;
+  }
+
+  return JSON.parse(perfilSalvo);
+}
+
 export function inicializarFormulario(receberCandidato) {
   formulario.addEventListener("submit", (event) =>
     validarFormulario(event, receberCandidato),
@@ -105,6 +119,7 @@ function criarCandidato() {
     experiencia: Number(campoExperiencia.value),
   };
 
+  salvarPerfil(candidato);
   return candidato;
 }
 

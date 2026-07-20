@@ -2,7 +2,7 @@ import {
   inicializarFormulario,
   atualizarStatusVagas,
   mostrarDashboard,
-} from "./ui.js";
+  obterPerfilSalvo} from "./ui.js";
 
 import { carregarVagas } from "./dados.js";
 
@@ -44,6 +44,12 @@ async function inicializarAplicacao() {
     inicializarFormulario((candidato) => {
       receberCandidato(candidato, vagas);
     });
+
+    const perfilSalvo = obterPerfilSalvo();
+
+    if (perfilSalvo !== null) {
+        receberCandidato(perfilSalvo, vagas)
+    }
   } catch (erro) {
     atualizarStatusVagas(
       "Não foi possível carregar as vagas. Tente novamente mais tarde.",
