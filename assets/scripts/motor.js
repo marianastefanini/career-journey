@@ -169,19 +169,37 @@ export function encontrarMelhorVaga(resultados) {
     return null;
   }
 
-  return resultados.reduce((melhor, atual) => {
+  const melhorVaga = resultados.reduce((melhor, atual) => {
     if (atual.percentual > melhor.percentual) {
       return atual;
     }
 
+    if (atual.percentual < melhor.percentual) {
+      return melhor;
+    }
+
+    if (atual.atendeExperiencia && !melhor.atendeExperiencia) {
+      return atual;
+    }
+
+    if (!atual.atendeExperiencia && melhor.atendeExperiencia) {
+      return melhor;
+    }
+
     if (
-      atual.percentual === melhor.percentual &&
       atual.atendeExperiencia &&
-      !melhor.atendeExperiencia
+      melhor.atendeExperiencia &&
+      atual.vaga.experienciaMinima > melhor.vaga.experienciaMinima
     ) {
       return atual;
     }
 
     return melhor;
   });
+
+  if (melhorVaga.percentual === 0) {
+    return null;
+  }
+
+  return melhorVaga;
 }

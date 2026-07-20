@@ -29,7 +29,7 @@ export function atualizarStatusVagas(mensagem) {
 }
 
 export function salvarPerfil(candidato) {
-  localStorage.setItem("perfilCandidato",JSON.stringify(candidato));
+  localStorage.setItem("perfilCandidato", JSON.stringify(candidato));
 }
 
 export function obterPerfilSalvo() {
@@ -86,7 +86,7 @@ function validarFormulario(event, receberCandidato) {
   }
 
   if (campoHabilidades.value.trim() === "") {
-    mostrarErro(erroHabilidades,"Digite pelo menos uma habilidade.");
+    mostrarErro(erroHabilidades, "Digite pelo menos uma habilidade.");
     formularioValido = false;
   }
 
@@ -123,7 +123,12 @@ function criarCandidato() {
   return candidato;
 }
 
-export function mostrarDashboard(candidato, resultados, melhorVaga, totalAnalises) {
+export function mostrarDashboard(
+  candidato,
+  resultados,
+  melhorVaga,
+  totalAnalises,
+) {
   onboarding.hidden = true;
   dashboard.hidden = false;
 
@@ -137,14 +142,15 @@ export function mostrarDashboard(candidato, resultados, melhorVaga, totalAnalise
 
   saudacaoCandidato.textContent = `Olá, ${candidato.nome}!`;
 
-  resumoCompatibilidade.textContent = `${Math.round(melhorVaga.percentual)}%`;
+  if (melhorVaga === null) {
+    resumoCompatibilidade.textContent = "0%";
+  } else {
+    resumoCompatibilidade.textContent = `${Math.round(melhorVaga.percentual)}%`;
+  }
 
   resumoVagas.textContent = resultados.length;
-
   resumoHabilidades.textContent = candidato.habilidades.length;
-
   quantidadeResultados.textContent = `${resultados.length} vagas encontradas`;
-
   resumoAnalises.textContent = totalAnalises;
 
   listaVagas.textContent = "";
@@ -185,7 +191,7 @@ function criarCardVaga(resultado, melhorVaga) {
 
   const detalhes = document.createElement("p");
   detalhes.classList.add("detalhes-vaga");
-  detalhes.textContent = `${resultado.vaga.modalidade} • ${resultado.vaga.experienciaMinima} meses`;
+  detalhes.textContent = `${resultado.vaga.modalidade} • Experiência Desejada: ${resultado.vaga.experienciaMinima} meses`;
 
   const salario = document.createElement("p");
   salario.classList.add("salario-vaga");

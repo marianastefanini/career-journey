@@ -51,7 +51,12 @@
     "empresa": "CreativeLab",
     "cargo": "Designer UI/UX Júnior II",
     "area": "ui-ux",
-    "requisitos": ["Figma", "Wireframes", "Prototipagem"],
+    "requisitos": [
+      "Figma",
+      "Design Responsivo",
+      "Arquitetura da Informação",
+      "Prototipagem"
+    ],
     "experienciaMinima": 6,
     "salario": 3700,
     "modalidade": "Híbrido"
@@ -87,7 +92,13 @@
     "empresa": "NextCode",
     "cargo": "Desenvolvedor Full Stack Júnior II",
     "area": "full-stack",
-    "requisitos": ["HTML", "CSS", "JavaScript", "Node.js"],
+    "requisitos": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "APIs",
+      "Banco de Dados"
+    ],
     "experienciaMinima": 6,
     "salario": 4600,
     "modalidade": "Híbrido"
