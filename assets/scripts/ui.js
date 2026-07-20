@@ -54,6 +54,7 @@ function refazerAnalise() {
   dashboard.hidden = true;
   onboarding.hidden = false;
 
+  localStorage.removeItem("perfilCandidato");
   formulario.reset();
   limparMensagensErro();
 

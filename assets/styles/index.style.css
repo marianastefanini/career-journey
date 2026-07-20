@@ -626,9 +626,15 @@ input::placeholder {
   color: #ffffff;
 }
 
+/*responsividade dashboard*/
+
 @media (max-width: 1000px) {
   .conteudo-dashboard {
     flex-direction: column;
+  }
+
+  .coluna-principal-dashboard {
+    width: 100%;
   }
 }
 
@@ -640,10 +646,21 @@ input::placeholder {
   .cabecalho-dashboard {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
   }
 
   .logo-dashboard {
     width: 180px;
+  }
+
+  .saudacao-dashboard h3 {
+    font-size: 22px;
+  }
+
+  .botao-refazer {
+    width: 100%;
+    min-width: 0;
   }
 
   .hero-dashboard {
@@ -655,12 +672,133 @@ input::placeholder {
     line-height: 42px;
   }
 
+  .resumo-dashboard {
+    flex-direction: column;
+  }
+
+  .card-resumo {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .resultados-vagas {
+    padding: 16px;
+  }
+
+  .card-vaga {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .informacoes-vaga {
+    width: 100%;
+  }
+
+  .bloco-compatibilidade {
+    width: 100%;
+    padding-top: 16px;
+    padding-left: 0;
+    border-top: 1px solid #dbe2ef;
+    border-left: none;
+  }
+
+  .bloco-habilidades {
+    width: 100%;
+    padding-top: 16px;
+    padding-left: 0;
+    border-top: 1px solid #dbe2ef;
+    border-left: none;
+  }
+
+  .recomendacao-vaga {
+    margin-top: 0;
+  }
+
   .rodape-dashboard {
     flex-direction: column;
     align-items: stretch;
   }
+}
 
-  .botao-refazer {
-    width: 100%;
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 12px;
   }
+
+  .cabecalho-dashboard {
+    gap: 16px;
+  }
+
+  .logo-dashboard {
+    width: 160px;
+  }
+
+  .saudacao-dashboard h3 {
+    font-size: 20px;
+  }
+
+  .saudacao-dashboard p {
+    font-size: 14px;
+  }
+
+  .hero-dashboard {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .hero-dashboard h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .hero-dashboard p:last-child {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .card-resumo {
+    padding: 20px;
+  }
+
+  .card-resumo strong {
+    font-size: 30px;
+  }
+
+  .resultados-vagas {
+    padding: 12px;
+  }
+
+  .card-vaga {
+    padding: 16px;
+  }
+
+  .informacoes-vaga h4 {
+    font-size: 17px;
+  }
+
+  .empresa-vaga {
+    font-size: 15px;
+  }
+
+  .detalhes-vaga,
+  .salario-vaga {
+    font-size: 13px;
+  }
+
+  .bloco-compatibilidade strong {
+    font-size: 26px;
+  }
+
+  .recomendacao-vaga {
+    padding: 14px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .rodape-dashboard {
+    padding: 18px;
+  }
+
 }
