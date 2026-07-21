@@ -2,7 +2,8 @@ import {
   inicializarFormulario,
   atualizarStatusVagas,
   mostrarDashboard,
-  obterPerfilSalvo} from "./ui.js";
+  obterPerfilSalvo,
+} from "./ui.js";
 
 import { carregarVagas } from "./dados.js";
 
@@ -48,7 +49,7 @@ async function inicializarAplicacao() {
     const perfilSalvo = obterPerfilSalvo();
 
     if (perfilSalvo !== null) {
-        receberCandidato(perfilSalvo, vagas)
+      receberCandidato(perfilSalvo, vagas);
     }
   } catch (erro) {
     atualizarStatusVagas(

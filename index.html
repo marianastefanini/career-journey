@@ -1,231 +1,160 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="CareerJourney ajuda desenvolvedores a encontrar oportunidades compatíveis com suas habilidades e descobrir os próximos passos da carreira."
-    />
-    <title>CareerJourney | Descubra seu próximo passo</title>
-    <link rel="stylesheet" href="./assets/styles/index.style.css" />
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CareerJourney ajuda desenvolvedores a encontrar oportunidades compatíveis com suas habilidades e descobrir os próximos passos da carreira.">
+    <title>CareerJourney | Descubra seu próximo passo</title>
+    <link rel="stylesheet" href="./assets/styles/index.style.css">
+</head>
+
+<body>
     <main>
-      <section
-        class="onboarding"
-        id="onboarding"
-        aria-labelledby="titulo-principal"
-      >
-        <!-- Pagina Inicial com formulario -->
-        <div class="conteudo-onboarding">
-          <header class="onboarding_introducao">
-            <a
-              href="#onboarding"
-              aria-label="Ir para o início do CareerJourney"
-            >
-              <img
-                class="logo"
-                src="./assets/images/logo-career-journey.png"
-                alt="Logo CareerJourney"
-              />
-            </a>
-            <h1 id="titulo-principal">
-              O próximo passo <span>começa hoje!</span>
-            </h1>
-            <p>
-              O CareerJourney analisa seu perfil, encontra oportunidades
-              compatíveis e indica quais habilidades podem ajudar você a
-              alcançar seu próximo objetivo profissional.
-            </p>
-          </header>
-          <section class="card-formulario" aria-labelledby="titulo-formulario">
-            <header class="cabecalho-formulario">
-              <h2 id="titulo-formulario">Pronto para o seu próximo desafio?</h2>
-              <p>
-                Conte um pouco sobre você e descubra o caminho para sua próxima
-                conquista.
-              </p>
+        <section class="onboarding" id="onboarding" aria-labelledby="titulo-principal">
+            <div class="conteudo-onboarding">
+                <header class="onboarding_introducao">
+                    <a href="#onboarding" aria-label="Ir para o início do CareerJourney">
+                        <img class="logo" src="./assets/images/logo-career-journey.png" alt="Logo CareerJourney">
+                    </a>
+                    <h1 id="titulo-principal">
+                        O próximo passo <span>começa hoje!</span>
+                    </h1>
+                    <p>
+                        O CareerJourney analisa seu perfil, encontra oportunidades
+                        compatíveis e indica quais habilidades podem ajudar você a
+                        alcançar seu próximo objetivo profissional.
+                    </p>
+                </header>
+                <section class="card-formulario" aria-labelledby="titulo-formulario">
+                    <header class="cabecalho-formulario">
+                        <h2 id="titulo-formulario">Pronto para o seu próximo desafio?</h2>
+                        <p>
+                            Conte um pouco sobre você e descubra o caminho para sua próxima
+                            conquista.
+                        </p>
+                    </header>
+
+                    <form class="formulario-perfil" id="formulario-perfil" novalidate autocomplete="on">
+                        <div class="campo-formulario">
+                            <label for="nome"><span class="icones icone-nome" aria-hidden="true"></span>Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo"
+                                autocomplete="name" required />
+                            <p class="mensagem-erro" id="erro-nome" aria-live="polite"></p>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="area"><span class="icones icone-area" aria-hidden="true"></span>Área de
+                                atuação</label>
+
+                            <select id="area" name="area" required>
+                                <option value="" selected disabled hidden>
+                                    Selecione sua área
+                                </option>
+                                <option value="front-end">Desenvolvimento Front-end</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="full-stack">Desenvolvimento Full Stack</option>
+                            </select>
+                            <p class="mensagem-erro" id="erro-area" aria-live="polite"></p>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="habilidades"><span class="icones icone-habilidades"
+                                    aria-hidden="true"></span>Principais habilidades</label>
+                            <input type="text" id="habilidades" name="habilidades"
+                                placeholder="Ex.: HTML, CSS, JavaScript" aria-describedby="ajuda-habilidades"
+                                required />
+                            <small id="ajuda-habilidades">Separe as habilidades por vírgula</small>
+                            <p class="mensagem-erro" id="erro-habilidades" aria-live="polite"></p>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="experiencia"><span class="icones icone-experiencia"
+                                    aria-hidden="true"></span>Tempo de experiência</label>
+                            <div class="campo-experiencia">
+                                <input type="number" id="experiencia" name="experiencia" min="0" placeholder="0"
+                                    step="1" inputmode="numeric" /><span>meses</span>
+                            </div>
+                        </div>
+                        <button class="botao-enviar" type="submit">
+                            Iniciar minha jornada
+                        </button>
+                    </form>
+                    <p class="mensagem-status" id="status-vagas" aria-live="polite"></p>
+                </section>
+            </div>
+        </section>
+        <section id="dashboard" class="dashboard" aria-labelledby="titulo-dashboard" hidden>
+            <header class="cabecalho-dashboard">
+                <img class="logo-dashboard" src="./assets/images/logo-career-journey-dashboard.png"
+                    alt="Logo Career Journey" />
+
+                <div class="saudacao-dashboard">
+                    <h3 id="saudacao-candidato"></h3>
+                    <p>Sua jornada de evolução continua.</p>
+                </div>
             </header>
 
-            <form
-              class="formulario-perfil"
-              id="formulario-perfil"
-              novalidate
-              autocomplete="on"
-            >
-              <div class="campo-formulario">
-                <label for="nome"
-                  ><span class="icones icone-nome" aria-hidden="true"></span
-                  >Nome</label
-                >
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Digite o seu nome completo"
-                  autocomplete="name"
-                  required
-                />
-                <p class="mensagem-erro" id="erro-nome" aria-live="polite"></p>
-              </div>
+            <div class="conteudo-dashboard">
+                <div class="coluna-principal-dashboard">
+                    <section class="hero-dashboard" aria-labelledby="titulo-dashboard">
+                        <p class="subtitulo-dashboard">Sua jornada</p>
+                        <h2 id="titulo-dashboard">Descubra seu próximo destino</h2>
+                        <p>
+                            Analisamos seu perfil e encontramos as melhores oportunidades
+                            para você evoluir.
+                        </p>
+                    </section>
 
-              <div class="campo-formulario">
-                <label for="area"
-                  ><span class="icones icone-area" aria-hidden="true"></span
-                  >Área de atuação</label
-                >
+                    <section class="resumo-dashboard" aria-label="Resumo da análise">
+                        <article class="card-resumo">
+                            <p>Compatibilidade da melhor vaga</p>
+                            <strong id="resumo-compatibilidade"></strong>
+                        </article>
 
-                <select id="area" name="area" required>
-                  <option value="" selected disabled hidden>
-                    Selecione sua área
-                  </option>
-                  <option value="front-end">Desenvolvimento Front-end</option>
-                  <option value="ui-ux">UI/UX Design</option>
-                  <option value="full-stack">Desenvolvimento Full Stack</option>
-                </select>
-                <p class="mensagem-erro" id="erro-area" aria-live="polite"></p>
-              </div>
+                        <article class="card-resumo">
+                            <p>Vagas analisadas</p>
+                            <strong id="resumo-vagas"></strong>
+                        </article>
 
-              <div class="campo-formulario">
-                <label for="habilidades"
-                  ><span
-                    class="icones icone-habilidades"
-                    aria-hidden="true"
-                  ></span
-                  >Principais habilidades</label
-                >
-                <input
-                  type="text"
-                  id="habilidades"
-                  name="habilidades"
-                  placeholder="Ex.: HTML, CSS, JavaScript"
-                  aria-describedby="ajuda-habilidades"
-                  required
-                />
-                <small id="ajuda-habilidades"
-                  >Separe as habilidades por vírgula</small
-                >
-                <p
-                  class="mensagem-erro"
-                  id="erro-habilidades"
-                  aria-live="polite"
-                ></p>
-              </div>
+                        <article class="card-resumo">
+                            <p>Habilidades dominadas</p>
+                            <strong id="resumo-habilidades"></strong>
+                        </article>
 
-              <div class="campo-formulario">
-                <label for="experiencia"
-                  ><span
-                    class="icones icone-experiencia"
-                    aria-hidden="true"
-                  ></span
-                  >Tempo de experiência</label
-                >
-                <div class="campo-experiencia">
-                  <input
-                    type="number"
-                    id="experiencia"
-                    name="experiencia"
-                    min="0"
-                    placeholder="0"
-                    step="1"
-                    inputmode="numeric"
-                  /><span>meses</span>
+                        <article class="card-resumo">
+                            <p>Análises realizadas</p>
+                            <strong id="resumo-analises"></strong>
+                        </article>
+                    </section>
+
+                    <section class="resultados-vagas" aria-labelledby="titulo-resultados">
+                        <header class="cabecalho-resultados">
+                            <div>
+                                <h3 id="titulo-resultados">Vagas para você</h3>
+                                <p id="quantidade-resultados"></p>
+                            </div>
+                        </header>
+
+                        <div class="lista-vagas" id="lista-vagas" aria-live="polite"></div>
+                    </section>
                 </div>
-              </div>
-              <button class="botao-enviar" type="submit">
-                Iniciar minha jornada
-              </button>
-            </form>
-            <p class="mensagem-status" id="status-vagas" aria-live="polite"></p>
-          </section>
-        </div>
-      </section>
-      <section
-        id="dashboard"
-        class="dashboard"
-        aria-labelledby="titulo-dashboard"
-        hidden
-      >
-        <header class="cabecalho-dashboard">
-          <img
-            class="logo-dashboard"
-            src="./assets/images/logo-career-journey-dashboard.png"
-            alt="Logo Career Journey"
-          />
+            </div>
 
-          <div class="saudacao-dashboard">
-            <h3 id="saudacao-candidato"></h3>
-            <p>Sua jornada de evolução continua.</p>
-          </div>
-        </header>
-
-        <div class="conteudo-dashboard">
-          <div class="coluna-principal-dashboard">
-            <section class="hero-dashboard" aria-labelledby="titulo-dashboard">
-              <p class="subtitulo-dashboard">Sua jornada</p>
-              <h2 id="titulo-dashboard">Descubra seu próximo destino</h2>
-              <p>
-                Analisamos seu perfil e encontramos as melhores oportunidades
-                para você evoluir.
-              </p>
-            </section>
-
-            <section class="resumo-dashboard" aria-label="Resumo da análise">
-              <article class="card-resumo">
-                <p>Compatibilidade da melhor vaga</p>
-                <strong id="resumo-compatibilidade"></strong>
-              </article>
-
-              <article class="card-resumo">
-                <p>Vagas analisadas</p>
-                <strong id="resumo-vagas"></strong>
-              </article>
-
-              <article class="card-resumo">
-                <p>Habilidades dominadas</p>
-                <strong id="resumo-habilidades"></strong>
-              </article>
-
-              <article class="card-resumo">
-                <p>Análises realizadas</p>
-                <strong id="resumo-analises"></strong>
-              </article>
-            </section>
-
-            <section
-              class="resultados-vagas"
-              aria-labelledby="titulo-resultados"
-            >
-              <header class="cabecalho-resultados">
+            <footer class="rodape-dashboard">
                 <div>
-                  <h3 id="titulo-resultados">Vagas para você</h3>
-                  <p id="quantidade-resultados"></p>
+                    <strong>Quer atualizar seus resultados?</strong>
+                    <p>Refaça sua análise a qualquer momento.</p>
                 </div>
-              </header>
 
-              <div
-                class="lista-vagas"
-                id="lista-vagas"
-                aria-live="polite"
-              ></div>
-            </section>
-          </div>
-        </div>
-
-        <footer class="rodape-dashboard">
-          <div>
-            <strong>Quer atualizar seus resultados?</strong>
-            <p>Refaça sua análise a qualquer momento.</p>
-          </div>
-
-          <button class="botao-refazer" id="botao-refazer" type="button">
-            Refazer análise
-          </button>
-        </footer>
-      </section>
+                <button class="botao-refazer" id="botao-refazer" type="button">
+                    Refazer análise
+                </button>
+            </footer>
+        </section>
     </main>
     <script type="module" src="./assets/scripts/main.js"></script>
-  </body>
+</body>
+
 </html>

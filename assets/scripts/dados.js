@@ -36,16 +36,16 @@ export async function carregarVagas() {
       );
     }
 
-      return new VagaFullStack(
-        vaga.id,
-        vaga.empresa,
-        vaga.cargo,
-        vaga.area,
-        vaga.requisitos,
-        vaga.experienciaMinima,
-        vaga.salario,
-        vaga.modalidade,
-      );
+    return new VagaFullStack(
+      vaga.id,
+      vaga.empresa,
+      vaga.cargo,
+      vaga.area,
+      vaga.requisitos,
+      vaga.experienciaMinima,
+      vaga.salario,
+      vaga.modalidade,
+    );
   });
 
   return vagas;
