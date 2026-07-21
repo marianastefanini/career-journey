@@ -143,7 +143,7 @@ Durante o desenvolvimento foram utilizadas ferramentas de apoio para pesquisa, e
 
 # Registro da depuração
 
-![alt text](debug.png)
+![alt text](/assets/images/debug.png)
 
 # Organização em Módulos
 - main.js: inicialização e controle do fluxo da aplicação;
