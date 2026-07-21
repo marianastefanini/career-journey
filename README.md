@@ -199,4 +199,4 @@ As funcionalidades foram desenvolvidas em branches específicas e posteriormente
 
 Repositório: [GitHub](https://github.com/marianastefanini/career-journey)
 Kanban: [GitHub Projects ou Trello](https://github.com/users/marianastefanini/projects/3/views/1)
-Vídeo de apresentação: [docs: atualiza README e documentação final](https://drive.google.com/file/d/18C9v9JinmwBwhKs6Eq3lMovZW7UcpqYD/view?usp=sharing)
+Vídeo de apresentação: [Google Drive](https://drive.google.com/file/d/18C9v9JinmwBwhKs6Eq3lMovZW7UcpqYD/view?usp=sharing)
